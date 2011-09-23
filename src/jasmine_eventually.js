@@ -20,14 +20,16 @@ var jasmineEventually = (function() {
 
     function wrapMatcher(matchers, name) {
       return function(/* arguments */) {
+        var args = arguments;
+
         waitsFor(function() {
           return silenceMatcherResult(matchers.spec, function() {
-            matchers[name].apply(matchers, arguments);
+            matchers[name].apply(matchers, args);
           });
         });
 
         runs(function() {
-          matchers[name].apply(matchers, arguments);
+          matchers[name].apply(matchers, args);
         });
       };
     }
