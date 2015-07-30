@@ -1,6 +1,8 @@
 # Jasmine Eventually
 
-* [github.com/tf/jasmine_eventually](http://github.com/tf/jasmine_eventually)
+**STATUS: Not maintained**
+
+---
 
 Asynchronous matching without `runs` and `waitsFor`.
 
